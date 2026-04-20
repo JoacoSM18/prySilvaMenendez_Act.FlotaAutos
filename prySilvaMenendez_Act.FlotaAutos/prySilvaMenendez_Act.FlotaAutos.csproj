@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarAlquiler.Designer.cs">
+      <DependentUpon>frmAgregarAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarChofer.Designer.cs">
+      <DependentUpon>frmAgregarChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarVehiculo.Designer.cs">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosChoferes.Designer.cs">
+      <DependentUpon>frmDatosChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDtaosVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDtaosVehiculos.Designer.cs">
+      <DependentUpon>frmDtaosVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerAlquileres.Designer.cs">
+      <DependentUpon>frmVerAlquileres.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
