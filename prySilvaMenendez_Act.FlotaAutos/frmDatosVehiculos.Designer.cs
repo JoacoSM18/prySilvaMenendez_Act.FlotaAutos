@@ -1,6 +1,6 @@
 ﻿namespace prySilvaMenendez_Act.FlotaAutos
 {
-    partial class frmDtaosVehiculos
+    partial class frmDatosVehiculos
     {
         /// <summary>
         /// Required designer variable.

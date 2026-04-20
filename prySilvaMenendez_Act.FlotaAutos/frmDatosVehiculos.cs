@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace prySilvaMenendez_Act.FlotaAutos
 {
-    public partial class frmDtaosVehiculos : Form
+    public partial class frmDatosVehiculos : Form
     {
-        public frmDtaosVehiculos()
+        public frmDatosVehiculos()
         {
             InitializeComponent();
         }

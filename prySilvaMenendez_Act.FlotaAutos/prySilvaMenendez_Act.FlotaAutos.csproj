@@ -70,11 +70,11 @@
     <Compile Include="frmDatosChoferes.Designer.cs">
       <DependentUpon>frmDatosChoferes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDtaosVehiculos.cs">
+    <Compile Include="frmDatosVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDtaosVehiculos.Designer.cs">
-      <DependentUpon>frmDtaosVehiculos.cs</DependentUpon>
+    <Compile Include="frmDatosVehiculos.Designer.cs">
+      <DependentUpon>frmDatosVehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
