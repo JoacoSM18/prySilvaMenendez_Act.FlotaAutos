@@ -38,6 +38,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             // btnAgregarChofer
             // 
             this.btnAgregarChofer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarChofer.Location = new System.Drawing.Point(6, 48);
+            this.btnAgregarChofer.Location = new System.Drawing.Point(6, 243);
             this.btnAgregarChofer.Name = "btnAgregarChofer";
             this.btnAgregarChofer.Size = new System.Drawing.Size(336, 40);
             this.btnAgregarChofer.TabIndex = 0;
@@ -67,7 +68,7 @@
             // btnAgregarAlquiler
             // 
             this.btnAgregarAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAlquiler.Location = new System.Drawing.Point(6, 245);
+            this.btnAgregarAlquiler.Location = new System.Drawing.Point(6, 59);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(336, 38);
             this.btnAgregarAlquiler.TabIndex = 2;
@@ -78,9 +79,9 @@
             // btnVerDatosChoferes
             // 
             this.btnVerDatosChoferes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerDatosChoferes.Location = new System.Drawing.Point(6, 245);
+            this.btnVerDatosChoferes.Location = new System.Drawing.Point(6, 243);
             this.btnVerDatosChoferes.Name = "btnVerDatosChoferes";
-            this.btnVerDatosChoferes.Size = new System.Drawing.Size(336, 38);
+            this.btnVerDatosChoferes.Size = new System.Drawing.Size(336, 40);
             this.btnVerDatosChoferes.TabIndex = 3;
             this.btnVerDatosChoferes.Text = "Ver Datos de Choferes";
             this.btnVerDatosChoferes.UseVisualStyleBackColor = true;
@@ -100,9 +101,9 @@
             // btnVerAlquileresEnCurso
             // 
             this.btnVerAlquileresEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerAlquileresEnCurso.Location = new System.Drawing.Point(6, 48);
+            this.btnVerAlquileresEnCurso.Location = new System.Drawing.Point(6, 59);
             this.btnVerAlquileresEnCurso.Name = "btnVerAlquileresEnCurso";
-            this.btnVerAlquileresEnCurso.Size = new System.Drawing.Size(336, 40);
+            this.btnVerAlquileresEnCurso.Size = new System.Drawing.Size(336, 38);
             this.btnVerAlquileresEnCurso.TabIndex = 5;
             this.btnVerAlquileresEnCurso.Text = "Ver Alquileres en Curso";
             this.btnVerAlquileresEnCurso.UseVisualStyleBackColor = true;
@@ -138,7 +139,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(217, 109);
+            this.lbl1.Location = new System.Drawing.Point(210, 110);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(362, 22);
             this.lbl1.TabIndex = 8;
@@ -147,18 +148,30 @@
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(152, 41);
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(144, 40);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(468, 26);
+            this.lbl2.Size = new System.Drawing.Size(508, 29);
             this.lbl2.TabIndex = 9;
             this.lbl2.Text = "Bienvenido al Sistema de ACDC Vehiculos";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.ForeColor = System.Drawing.Color.Red;
+            this.btnSalir.Location = new System.Drawing.Point(630, 489);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(97, 31);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "&SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 514);
+            this.ClientSize = new System.Drawing.Size(747, 535);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.groupBox2);
@@ -185,6 +198,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

@@ -52,5 +52,10 @@ namespace prySilvaMenendez_Act.FlotaAutos
             frmDatosChoferes DatosChoferes = new frmDatosChoferes();
             DatosChoferes.ShowDialog();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
