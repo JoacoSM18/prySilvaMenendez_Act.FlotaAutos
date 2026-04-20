@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsVehiculos.cs" />
     <Compile Include="frmAgregarAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,8 +94,20 @@
     <EmbeddedResource Include="frmAgregarAlquiler.resx">
       <DependentUpon>frmAgregarAlquiler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarChofer.resx">
+      <DependentUpon>frmAgregarChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarVehiculo.resx">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosVehiculos.resx">
+      <DependentUpon>frmDatosVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerAlquileres.resx">
+      <DependentUpon>frmVerAlquileres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
