@@ -50,7 +50,7 @@
             this.btnAgregarChofer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarChofer.Name = "btnAgregarChofer";
             this.btnAgregarChofer.Size = new System.Drawing.Size(224, 26);
-            this.btnAgregarChofer.TabIndex = 0;
+            this.btnAgregarChofer.TabIndex = 2;
             this.btnAgregarChofer.Text = "Agregar Chofer";
             this.btnAgregarChofer.UseVisualStyleBackColor = true;
             this.btnAgregarChofer.Click += new System.EventHandler(this.btnAgregarChofer_Click);
@@ -74,7 +74,7 @@
             this.btnAgregarAlquiler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(224, 25);
-            this.btnAgregarAlquiler.TabIndex = 2;
+            this.btnAgregarAlquiler.TabIndex = 0;
             this.btnAgregarAlquiler.Text = "Agregar Nuevo Alquiler";
             this.btnAgregarAlquiler.UseVisualStyleBackColor = true;
             this.btnAgregarAlquiler.Click += new System.EventHandler(this.btnAgregarAlquiler_Click);
@@ -86,7 +86,7 @@
             this.btnVerDatosChoferes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerDatosChoferes.Name = "btnVerDatosChoferes";
             this.btnVerDatosChoferes.Size = new System.Drawing.Size(224, 26);
-            this.btnVerDatosChoferes.TabIndex = 3;
+            this.btnVerDatosChoferes.TabIndex = 5;
             this.btnVerDatosChoferes.Text = "Ver Datos de Choferes";
             this.btnVerDatosChoferes.UseVisualStyleBackColor = true;
             this.btnVerDatosChoferes.Click += new System.EventHandler(this.btnVerDatosChoferes_Click);
@@ -110,7 +110,7 @@
             this.btnVerAlquileresEnCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerAlquileresEnCurso.Name = "btnVerAlquileresEnCurso";
             this.btnVerAlquileresEnCurso.Size = new System.Drawing.Size(224, 25);
-            this.btnVerAlquileresEnCurso.TabIndex = 5;
+            this.btnVerAlquileresEnCurso.TabIndex = 3;
             this.btnVerAlquileresEnCurso.Text = "Ver Alquileres en Curso";
             this.btnVerAlquileresEnCurso.UseVisualStyleBackColor = true;
             this.btnVerAlquileresEnCurso.Click += new System.EventHandler(this.btnVerAlquileresEnCurso_Click);
@@ -174,7 +174,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(65, 20);
-            this.btnSalir.TabIndex = 10;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "&SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
