@@ -157,6 +157,7 @@
             this.Name = "frmAgregarVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar un Vehiculo";
+            this.Load += new System.EventHandler(this.frmAgregarVehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numAño)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

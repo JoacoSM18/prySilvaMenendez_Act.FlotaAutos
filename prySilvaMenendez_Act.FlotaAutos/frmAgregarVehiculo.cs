@@ -12,6 +12,8 @@ namespace prySilvaMenendez_Act.FlotaAutos
 {
     public partial class frmAgregarVehiculo : Form
     {
+        List<Vehiculos> listaVehiculos = new List<Vehiculos>();
+
         public frmAgregarVehiculo()
         {
             InitializeComponent();
@@ -30,6 +32,11 @@ namespace prySilvaMenendez_Act.FlotaAutos
             Vehiculo.Modelo = txtModelo.Text;
             Vehiculo.Año = (int)numAño.Value;
             Vehiculo.Patente = mskPatente.Text;
+        }
+
+        private void frmAgregarVehiculo_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
