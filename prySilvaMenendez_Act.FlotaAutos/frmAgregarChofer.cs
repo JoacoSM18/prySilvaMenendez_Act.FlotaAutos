@@ -16,5 +16,25 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             InitializeComponent();
         }
+
+        private void frmAgregarChofer_Load(object sender, EventArgs e)
+        {
+            mskDNI.Mask = "00000000";
+        }
+
+        private void mskCarnet_Enter(object sender, EventArgs e)
+        {
+            mskCarnet.SelectionStart = 0;
+        }
+
+        private void mskNacimiento_Enter(object sender, EventArgs e)
+        {
+            mskNacimiento.SelectionStart = 0;
+        }
+
+        private void mskDNI_Enter(object sender, EventArgs e)
+        {
+            mskDNI.SelectionStart = 0;
+        }
     }
 }
