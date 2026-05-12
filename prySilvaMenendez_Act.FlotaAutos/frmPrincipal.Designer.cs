@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.btnAgregarChofer = new System.Windows.Forms.Button();
             this.btnAgregarVehiculo = new System.Windows.Forms.Button();
             this.btnAgregarAlquiler = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             // 
             this.btnAgregarChofer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarChofer.Location = new System.Drawing.Point(4, 158);
-            this.btnAgregarChofer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarChofer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarChofer.Name = "btnAgregarChofer";
             this.btnAgregarChofer.Size = new System.Drawing.Size(224, 26);
             this.btnAgregarChofer.TabIndex = 2;
@@ -59,7 +60,7 @@
             // 
             this.btnAgregarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarVehiculo.Location = new System.Drawing.Point(4, 95);
-            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarVehiculo.Name = "btnAgregarVehiculo";
             this.btnAgregarVehiculo.Size = new System.Drawing.Size(224, 28);
             this.btnAgregarVehiculo.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.btnAgregarAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAlquiler.Location = new System.Drawing.Point(4, 38);
-            this.btnAgregarAlquiler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarAlquiler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(224, 25);
             this.btnAgregarAlquiler.TabIndex = 0;
@@ -83,7 +84,7 @@
             // 
             this.btnVerDatosChoferes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDatosChoferes.Location = new System.Drawing.Point(4, 158);
-            this.btnVerDatosChoferes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDatosChoferes.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDatosChoferes.Name = "btnVerDatosChoferes";
             this.btnVerDatosChoferes.Size = new System.Drawing.Size(224, 26);
             this.btnVerDatosChoferes.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             this.btnVerDatosVehiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDatosVehiculos.Location = new System.Drawing.Point(4, 95);
-            this.btnVerDatosVehiculos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDatosVehiculos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDatosVehiculos.Name = "btnVerDatosVehiculos";
             this.btnVerDatosVehiculos.Size = new System.Drawing.Size(224, 28);
             this.btnVerDatosVehiculos.TabIndex = 4;
@@ -107,7 +108,7 @@
             // 
             this.btnVerAlquileresEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerAlquileresEnCurso.Location = new System.Drawing.Point(4, 38);
-            this.btnVerAlquileresEnCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerAlquileresEnCurso.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerAlquileresEnCurso.Name = "btnVerAlquileresEnCurso";
             this.btnVerAlquileresEnCurso.Size = new System.Drawing.Size(224, 25);
             this.btnVerAlquileresEnCurso.TabIndex = 3;
@@ -122,9 +123,9 @@
             this.groupBox1.Controls.Add(this.btnAgregarAlquiler);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 100);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(234, 208);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -137,9 +138,9 @@
             this.groupBox2.Controls.Add(this.btnVerAlquileresEnCurso);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(253, 100);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(232, 208);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
@@ -171,7 +172,7 @@
             // 
             this.btnSalir.ForeColor = System.Drawing.Color.Red;
             this.btnSalir.Location = new System.Drawing.Point(420, 318);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(65, 20);
             this.btnSalir.TabIndex = 6;
@@ -183,13 +184,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(498, 348);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alquiler de Vehiculos";

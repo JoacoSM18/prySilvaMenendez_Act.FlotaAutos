@@ -24,19 +24,29 @@ namespace prySilvaMenendez_Act.FlotaAutos
             mskPatente.SelectionStart = 0;
 
         }
+        private void frmAgregarVehiculo_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
         {
+            if (txtMarca.Text == "" || txtModelo.Text == "" || mskPatente.Text == "")
+            {
+                MessageBox.Show("Datos Incompletos, Por Favor Complete todos los Campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMarca.Focus();
+                return;
+            }
             Vehiculos Vehiculo = new Vehiculos();
             Vehiculo.Marca = txtMarca.Text;
             Vehiculo.Modelo = txtModelo.Text;
             Vehiculo.Año = (int)numAño.Value;
             Vehiculo.Patente = mskPatente.Text;
-        }
-
-        private void frmAgregarVehiculo_Load(object sender, EventArgs e)
-        {
-            
+            MessageBox.Show("Vehiculo Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtMarca.Clear ();
+            txtModelo.Clear ();
+            numAño.Value = 2026;
+            mskPatente.Clear ();
         }
     }
 }

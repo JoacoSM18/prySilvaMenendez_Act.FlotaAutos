@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarVehiculo));
             this.lblPatente = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
             this.lblAño = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@
             this.numAño.BackColor = System.Drawing.SystemColors.Window;
             this.numAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAño.Location = new System.Drawing.Point(387, 136);
-            this.numAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numAño.Margin = new System.Windows.Forms.Padding(2);
             this.numAño.Maximum = new decimal(new int[] {
             2026,
             0,
@@ -114,7 +115,7 @@
             // 
             this.mskPatente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskPatente.Location = new System.Drawing.Point(387, 187);
-            this.mskPatente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskPatente.Margin = new System.Windows.Forms.Padding(2);
             this.mskPatente.Name = "mskPatente";
             this.mskPatente.Size = new System.Drawing.Size(60, 22);
             this.mskPatente.TabIndex = 3;
@@ -124,7 +125,7 @@
             // 
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(333, 83);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(2);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(114, 22);
             this.txtModelo.TabIndex = 1;
@@ -133,7 +134,7 @@
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(333, 34);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(114, 22);
             this.txtMarca.TabIndex = 0;
@@ -142,7 +143,7 @@
             // 
             this.btnAgregarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarVehiculo.Location = new System.Drawing.Point(333, 249);
-            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarVehiculo.Name = "btnAgregarVehiculo";
             this.btnAgregarVehiculo.Size = new System.Drawing.Size(177, 32);
             this.btnAgregarVehiculo.TabIndex = 8;
@@ -154,6 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.btnAgregarVehiculo);
             this.Controls.Add(this.txtMarca);
@@ -164,7 +166,8 @@
             this.Controls.Add(this.lblAño);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblPatente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar un Vehiculo";

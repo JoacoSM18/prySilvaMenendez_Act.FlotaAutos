@@ -32,11 +32,13 @@
             // 
             // frmVerAlquileres
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 450);
+            this.ClientSize = new System.Drawing.Size(427, 332);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmVerAlquileres";
-            this.Text = "frmVerAlquileres";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alquileres en Curso";
             this.ResumeLayout(false);
 
         }

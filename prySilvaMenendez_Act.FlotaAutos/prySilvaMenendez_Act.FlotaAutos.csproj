@@ -100,6 +100,9 @@
     <EmbeddedResource Include="frmAgregarVehiculo.resx">
       <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosChoferes.resx">
+      <DependentUpon>frmDatosChoferes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDatosVehiculos.resx">
       <DependentUpon>frmDatosVehiculos.cs</DependentUpon>
     </EmbeddedResource>
