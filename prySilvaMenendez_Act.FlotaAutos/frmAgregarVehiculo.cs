@@ -18,17 +18,10 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             InitializeComponent();
         }
-
-        private void mskPatente_Enter(object sender, EventArgs e)
-        {
-            mskPatente.SelectionStart = 0;
-
-        }
         private void frmAgregarVehiculo_Load(object sender, EventArgs e)
         {
-
+            mskPatente.Mask = "AA-000-AA";
         }
-
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
         {
             if (txtMarca.Text == "" || txtModelo.Text == "" || mskPatente.Text == "")
@@ -47,6 +40,11 @@ namespace prySilvaMenendez_Act.FlotaAutos
             txtModelo.Clear ();
             numAño.Value = 2026;
             mskPatente.Clear ();
+        }
+
+        private void mskPatente_Click(object sender, EventArgs e)
+        {
+            mskPatente.SelectionStart = 0;
         }
     }
 }

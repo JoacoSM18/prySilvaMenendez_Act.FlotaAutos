@@ -89,7 +89,7 @@
             // 
             this.numAño.BackColor = System.Drawing.SystemColors.Window;
             this.numAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numAño.Location = new System.Drawing.Point(387, 136);
+            this.numAño.Location = new System.Drawing.Point(387, 133);
             this.numAño.Margin = new System.Windows.Forms.Padding(2);
             this.numAño.Maximum = new decimal(new int[] {
             2026,
@@ -114,17 +114,17 @@
             // mskPatente
             // 
             this.mskPatente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskPatente.Location = new System.Drawing.Point(387, 187);
+            this.mskPatente.Location = new System.Drawing.Point(375, 184);
             this.mskPatente.Margin = new System.Windows.Forms.Padding(2);
             this.mskPatente.Name = "mskPatente";
-            this.mskPatente.Size = new System.Drawing.Size(60, 22);
+            this.mskPatente.Size = new System.Drawing.Size(71, 22);
             this.mskPatente.TabIndex = 3;
-            this.mskPatente.Enter += new System.EventHandler(this.mskPatente_Enter);
+            this.mskPatente.Click += new System.EventHandler(this.mskPatente_Click);
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(333, 83);
+            this.txtModelo.Location = new System.Drawing.Point(333, 80);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(2);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(114, 22);
@@ -133,7 +133,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(333, 34);
+            this.txtMarca.Location = new System.Drawing.Point(332, 32);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(114, 22);
