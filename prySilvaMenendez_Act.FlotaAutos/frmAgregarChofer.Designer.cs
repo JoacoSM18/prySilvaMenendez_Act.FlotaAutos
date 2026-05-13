@@ -38,36 +38,36 @@
             this.lblCarnet = new System.Windows.Forms.Label();
             this.mskNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.mskCarnet = new System.Windows.Forms.MaskedTextBox();
+            this.lblSeguro = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAgregarVehiculo
             // 
             this.btnAgregarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarVehiculo.Location = new System.Drawing.Point(311, 239);
-            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarVehiculo.Location = new System.Drawing.Point(466, 368);
             this.btnAgregarVehiculo.Name = "btnAgregarVehiculo";
-            this.btnAgregarVehiculo.Size = new System.Drawing.Size(177, 32);
+            this.btnAgregarVehiculo.Size = new System.Drawing.Size(266, 49);
             this.btnAgregarVehiculo.TabIndex = 17;
             this.btnAgregarVehiculo.Text = "Agregar Nuevo Vehiculo";
             this.btnAgregarVehiculo.UseVisualStyleBackColor = true;
+            this.btnAgregarVehiculo.Click += new System.EventHandler(this.btnAgregarVehiculo_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(353, 19);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(530, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(114, 22);
+            this.txtNombre.Size = new System.Drawing.Size(169, 29);
             this.txtNombre.TabIndex = 9;
             // 
             // mskDNI
             // 
             this.mskDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDNI.Location = new System.Drawing.Point(396, 52);
-            this.mskDNI.Margin = new System.Windows.Forms.Padding(2);
+            this.mskDNI.Location = new System.Drawing.Point(594, 80);
             this.mskDNI.Mask = "99999";
             this.mskDNI.Name = "mskDNI";
-            this.mskDNI.Size = new System.Drawing.Size(71, 22);
+            this.mskDNI.Size = new System.Drawing.Size(104, 29);
             this.mskDNI.TabIndex = 15;
             this.mskDNI.ValidatingType = typeof(int);
             this.mskDNI.Enter += new System.EventHandler(this.mskDNI_Enter);
@@ -76,10 +76,9 @@
             // 
             this.lbNombre.AutoSize = true;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre.Location = new System.Drawing.Point(44, 22);
-            this.lbNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbNombre.Location = new System.Drawing.Point(66, 34);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(182, 16);
+            this.lbNombre.Size = new System.Drawing.Size(259, 24);
             this.lbNombre.TabIndex = 16;
             this.lbNombre.Text = "Ingrese el Nombre del Chofer";
             // 
@@ -87,10 +86,9 @@
             // 
             this.lblNacimiento.AutoSize = true;
             this.lblNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNacimiento.Location = new System.Drawing.Point(44, 94);
-            this.lblNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNacimiento.Location = new System.Drawing.Point(66, 145);
             this.lblNacimiento.Name = "lblNacimiento";
-            this.lblNacimiento.Size = new System.Drawing.Size(261, 16);
+            this.lblNacimiento.Size = new System.Drawing.Size(370, 24);
             this.lblNacimiento.TabIndex = 14;
             this.lblNacimiento.Text = "Ingrese la Fecha de Nacimiento del Chofer";
             // 
@@ -98,10 +96,9 @@
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNI.Location = new System.Drawing.Point(44, 55);
-            this.lblDNI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDNI.Location = new System.Drawing.Point(66, 85);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(156, 16);
+            this.lblDNI.Size = new System.Drawing.Size(221, 24);
             this.lblDNI.TabIndex = 12;
             this.lblDNI.Text = "Ingrese el DNI del Chofer";
             // 
@@ -109,19 +106,19 @@
             // 
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarnet.Location = new System.Drawing.Point(44, 129);
-            this.lblCarnet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCarnet.Location = new System.Drawing.Point(66, 198);
             this.lblCarnet.Name = "lblCarnet";
-            this.lblCarnet.Size = new System.Drawing.Size(242, 16);
+            this.lblCarnet.Size = new System.Drawing.Size(346, 24);
             this.lblCarnet.TabIndex = 10;
             this.lblCarnet.Text = "Ingrese el Numero de Carnet del Chofer";
             // 
             // mskNacimiento
             // 
-            this.mskNacimiento.Location = new System.Drawing.Point(402, 90);
+            this.mskNacimiento.Location = new System.Drawing.Point(603, 138);
+            this.mskNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mskNacimiento.Mask = "00/00/0000";
             this.mskNacimiento.Name = "mskNacimiento";
-            this.mskNacimiento.Size = new System.Drawing.Size(65, 20);
+            this.mskNacimiento.Size = new System.Drawing.Size(96, 26);
             this.mskNacimiento.TabIndex = 19;
             this.mskNacimiento.ValidatingType = typeof(System.DateTime);
             this.mskNacimiento.Enter += new System.EventHandler(this.mskNacimiento_Enter);
@@ -129,21 +126,46 @@
             // mskCarnet
             // 
             this.mskCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCarnet.Location = new System.Drawing.Point(424, 123);
-            this.mskCarnet.Margin = new System.Windows.Forms.Padding(2);
+            this.mskCarnet.Location = new System.Drawing.Point(636, 189);
             this.mskCarnet.Mask = "99999";
             this.mskCarnet.Name = "mskCarnet";
-            this.mskCarnet.Size = new System.Drawing.Size(43, 22);
+            this.mskCarnet.Size = new System.Drawing.Size(62, 29);
             this.mskCarnet.TabIndex = 20;
             this.mskCarnet.ValidatingType = typeof(int);
             this.mskCarnet.Enter += new System.EventHandler(this.mskCarnet_Enter);
             // 
+            // lblSeguro
+            // 
+            this.lblSeguro.AutoSize = true;
+            this.lblSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeguro.Location = new System.Drawing.Point(66, 257);
+            this.lblSeguro.Name = "lblSeguro";
+            this.lblSeguro.Size = new System.Drawing.Size(364, 24);
+            this.lblSeguro.TabIndex = 21;
+            this.lblSeguro.Text = "Seleccione el Seguro que Utiliza el Chofer";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sancor Seguros",
+            "La Caja",
+            "San Cristobal",
+            "La Segunda"});
+            this.comboBox1.Location = new System.Drawing.Point(530, 253);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(169, 28);
+            this.comboBox1.TabIndex = 22;
+            // 
             // frmAgregarChofer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblSeguro);
             this.Controls.Add(this.mskCarnet);
             this.Controls.Add(this.mskNacimiento);
             this.Controls.Add(this.btnAgregarVehiculo);
@@ -154,7 +176,6 @@
             this.Controls.Add(this.lblDNI);
             this.Controls.Add(this.lblCarnet);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarChofer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar un Chofer";
@@ -175,5 +196,7 @@
         private System.Windows.Forms.Label lblCarnet;
         private System.Windows.Forms.MaskedTextBox mskNacimiento;
         private System.Windows.Forms.MaskedTextBox mskCarnet;
+        private System.Windows.Forms.Label lblSeguro;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

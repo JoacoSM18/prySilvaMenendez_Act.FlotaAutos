@@ -36,5 +36,10 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             mskDNI.SelectionStart = 0;
         }
+
+        private void btnAgregarVehiculo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
