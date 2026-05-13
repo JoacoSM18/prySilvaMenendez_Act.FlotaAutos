@@ -12,6 +12,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
 {
     public partial class frmPrincipal : Form
     {
+        public List<Vehiculos> listaVehiculos = new List<Vehiculos>();
         public frmPrincipal()
         {
             InitializeComponent();
@@ -25,13 +26,13 @@ namespace prySilvaMenendez_Act.FlotaAutos
 
         private void btnAgregarVehiculo_Click_1(object sender, EventArgs e)
         {
-            frmAgregarVehiculo AgregarVehiculo = new frmAgregarVehiculo();
+            frmAgregarVehiculo AgregarVehiculo = new frmAgregarVehiculo(listaVehiculos);
             AgregarVehiculo.ShowDialog();
         }
 
         private void btnAgregarAlquiler_Click(object sender, EventArgs e)
         {
-            frmAgregarAlquiler AgregarAlquiler = new frmAgregarAlquiler();
+            frmAgregarAlquiler AgregarAlquiler = new frmAgregarAlquiler(listaVehiculos);
             AgregarAlquiler.ShowDialog();
         }
 
@@ -56,6 +57,11 @@ namespace prySilvaMenendez_Act.FlotaAutos
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

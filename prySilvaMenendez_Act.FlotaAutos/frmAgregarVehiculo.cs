@@ -12,11 +12,11 @@ namespace prySilvaMenendez_Act.FlotaAutos
 {
     public partial class frmAgregarVehiculo : Form
     {
-        List<Vehiculos> listaVehiculos = new List<Vehiculos>();
-
-        public frmAgregarVehiculo()
+        public List<Vehiculos> listaVehiculos;
+        public frmAgregarVehiculo(List<Vehiculos> vehiculos)
         {
             InitializeComponent();
+            listaVehiculos = vehiculos;
         }
         private void frmAgregarVehiculo_Load(object sender, EventArgs e)
         {
