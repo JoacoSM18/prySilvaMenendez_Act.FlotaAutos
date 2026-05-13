@@ -35,6 +35,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
             Vehiculo.Modelo = txtModelo.Text;
             Vehiculo.Año = (int)numAño.Value;
             Vehiculo.Patente = mskPatente.Text;
+            listaVehiculos.Add(Vehiculo);
             MessageBox.Show("Vehiculo Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtMarca.Clear ();
             txtModelo.Clear ();

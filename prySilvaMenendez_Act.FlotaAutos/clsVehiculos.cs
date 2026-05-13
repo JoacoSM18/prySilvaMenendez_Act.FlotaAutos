@@ -16,6 +16,5 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             return Marca + " " + Modelo + " (" + Año + ") - " + Patente;
         }
-
     }
 }

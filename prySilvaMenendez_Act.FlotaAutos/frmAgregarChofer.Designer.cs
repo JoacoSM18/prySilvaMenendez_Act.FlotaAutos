@@ -39,7 +39,7 @@
             this.mskNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.mskCarnet = new System.Windows.Forms.MaskedTextBox();
             this.lblSeguro = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSeguros = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAgregarVehiculo
@@ -60,6 +60,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(169, 29);
             this.txtNombre.TabIndex = 9;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // mskDNI
             // 
@@ -70,7 +71,7 @@
             this.mskDNI.Size = new System.Drawing.Size(104, 29);
             this.mskDNI.TabIndex = 15;
             this.mskDNI.ValidatingType = typeof(int);
-            this.mskDNI.Enter += new System.EventHandler(this.mskDNI_Enter);
+            this.mskDNI.Click += new System.EventHandler(this.mskDNI_Click);
             // 
             // lbNombre
             // 
@@ -121,7 +122,7 @@
             this.mskNacimiento.Size = new System.Drawing.Size(96, 26);
             this.mskNacimiento.TabIndex = 19;
             this.mskNacimiento.ValidatingType = typeof(System.DateTime);
-            this.mskNacimiento.Enter += new System.EventHandler(this.mskNacimiento_Enter);
+            this.mskNacimiento.Click += new System.EventHandler(this.mskNacimiento_Click);
             // 
             // mskCarnet
             // 
@@ -132,7 +133,7 @@
             this.mskCarnet.Size = new System.Drawing.Size(62, 29);
             this.mskCarnet.TabIndex = 20;
             this.mskCarnet.ValidatingType = typeof(int);
-            this.mskCarnet.Enter += new System.EventHandler(this.mskCarnet_Enter);
+            this.mskCarnet.Click += new System.EventHandler(this.mskCarnet_Click);
             // 
             // lblSeguro
             // 
@@ -144,19 +145,19 @@
             this.lblSeguro.TabIndex = 21;
             this.lblSeguro.Text = "Seleccione el Seguro que Utiliza el Chofer";
             // 
-            // comboBox1
+            // cmbSeguros
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSeguros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSeguros.FormattingEnabled = true;
+            this.cmbSeguros.Items.AddRange(new object[] {
             "Sancor Seguros",
             "La Caja",
             "San Cristobal",
             "La Segunda"});
-            this.comboBox1.Location = new System.Drawing.Point(530, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 28);
-            this.comboBox1.TabIndex = 22;
+            this.cmbSeguros.Location = new System.Drawing.Point(530, 253);
+            this.cmbSeguros.Name = "cmbSeguros";
+            this.cmbSeguros.Size = new System.Drawing.Size(169, 28);
+            this.cmbSeguros.TabIndex = 22;
             // 
             // frmAgregarChofer
             // 
@@ -164,7 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 449);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbSeguros);
             this.Controls.Add(this.lblSeguro);
             this.Controls.Add(this.mskCarnet);
             this.Controls.Add(this.mskNacimiento);
@@ -197,6 +198,6 @@
         private System.Windows.Forms.MaskedTextBox mskNacimiento;
         private System.Windows.Forms.MaskedTextBox mskCarnet;
         private System.Windows.Forms.Label lblSeguro;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSeguros;
     }
 }
