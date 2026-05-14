@@ -22,7 +22,6 @@ namespace prySilvaMenendez_Act.FlotaAutos
             InitializeComponent();
             listaVehiculos = vehiculos;
         }
-
         private void frmAgregarAlquiler_Load(object sender, EventArgs e)
         {
             cmbVehiculos.DataSource = listaVehiculos;
@@ -76,7 +75,6 @@ namespace prySilvaMenendez_Act.FlotaAutos
             {
                 precioPorDia = 35000;
             }
-
             total = precioPorDia * dias;
             DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + total, "¿Desea Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.No)
