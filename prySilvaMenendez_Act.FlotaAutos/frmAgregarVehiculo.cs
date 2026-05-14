@@ -37,7 +37,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
             listaVehiculos.Add(v);
             ConexionBD bd = new ConexionBD();
             bd.GuardarVehiculo(v);
-            MessageBox.Show("Vehiculo Agregado Correctamente");
+            MessageBox.Show("Vehiculo Agregado Correctamente","Éxito",MessageBoxButtons.OK,MessageBoxIcon.Information);
             txtMarca.Clear();
             txtModelo.Clear();
             numAño.Value = 2026;
