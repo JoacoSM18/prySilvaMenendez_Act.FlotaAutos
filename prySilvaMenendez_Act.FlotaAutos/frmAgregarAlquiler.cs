@@ -30,7 +30,6 @@ namespace prySilvaMenendez_Act.FlotaAutos
             monthCalendar1.MinDate = DateTime.Today;
             monthCalendar1.MaxSelectionCount = 31;
         }
-
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
         {
             DateTime inicio = monthCalendar1.SelectionStart;
@@ -58,43 +57,28 @@ namespace prySilvaMenendez_Act.FlotaAutos
             Alquiler.FechaInicio = monthCalendar1.SelectionStart;
             Alquiler.FechaFin = monthCalendar1.SelectionEnd;
             listaAlquileres.Add(Alquiler);
+            int precioPorDia;
+            int dias = (fin - inicio).Days + 1;
+            double total;
             if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2020)
             {
-                precio = 70000;
+                precioPorDia = 70000;
             }
             else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2010)
             {
-                precio = 50000;
+                precioPorDia = 50000;
             }
             else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2006)
             {
-                precio = 45000;
+                precioPorDia = 45000;
             }
             else
             {
-                precio = 35000;
+                precioPorDia = 35000;
             }
-            if ((fin - inicio).Days >= 21)
-            {
-                aumento = 1.4;
-            }
-            else if ((fin - inicio).Days >= 14)
-            {
-                aumento = 1.3;
-            }
-            else if ((fin - inicio).Days >= 7)
-            {
-                aumento = 1.2;
-            }
-            else if ((fin - inicio).Days >= 4)
-            {
-                aumento = 1.1;
-            }
-            else
-            {
-                aumento = 1.05;
-            }
-            DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + precio * aumento, "¿Desea Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            total = precioPorDia * dias;
+            DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + total, "¿Desea Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.No)
             {
                 return;
