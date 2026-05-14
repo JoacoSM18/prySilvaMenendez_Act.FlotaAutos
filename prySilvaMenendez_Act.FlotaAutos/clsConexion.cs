@@ -12,7 +12,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
         OleDbConnection conexion;
         public ConexionBD()
         {
-            conexion = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\FlotaAutos.accdb");
+            conexion = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=|DataDirectory|\\FlotaAutos.accdb");
         }
         public void Abrir()
         {
