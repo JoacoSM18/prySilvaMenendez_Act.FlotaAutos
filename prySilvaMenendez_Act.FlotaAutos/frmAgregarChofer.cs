@@ -17,12 +17,10 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             InitializeComponent();
         }
-
         private void frmAgregarChofer_Load(object sender, EventArgs e)
         {
             mskDNI.Mask = "00000000";
         }
-
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text == "" || mskDNI.Text == "" || mskNacimiento.Text == "" || mskCarnet.Text == "" || cmbSeguros.Text == "")
@@ -31,13 +29,15 @@ namespace prySilvaMenendez_Act.FlotaAutos
                 txtNombre.Focus();
                 return;
             }
-            Choferes Chofer = new Choferes();
-            Chofer.Nombre = txtNombre.Text;
-            Chofer.DNI = Convert.ToInt32(mskDNI.Text);
-            Chofer.Nacimiento = DateTime.Parse(mskNacimiento.Text);
-            Chofer.NroCarnet = Convert.ToInt32(mskCarnet.Text);
-            Chofer.Seguro = cmbSeguros.Text;
-            listaChoferes.Add(Chofer);
+            Choferes c = new Choferes();
+            c.Nombre = txtNombre.Text;
+            c.DNI = Convert.ToInt32(mskDNI.Text);
+            c.Nacimiento = DateTime.Parse(mskNacimiento.Text);
+            c.NroCarnet = Convert.ToInt32(mskCarnet.Text);
+            c.Seguro = cmbSeguros.Text;
+            listaChoferes.Add(c);
+            ConexionBD bd = new ConexionBD();
+            bd.GuardarChofer(c);
             MessageBox.Show("Chofer Agregado Correctamente", "Agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtNombre.Clear();
             mskDNI.Clear();
@@ -46,7 +46,6 @@ namespace prySilvaMenendez_Act.FlotaAutos
             cmbSeguros.SelectedIndex = -1;
             txtNombre.Focus();
         }
-
         private void mskDNI_Click(object sender, EventArgs e)
         {
             mskDNI.SelectionStart = 0;
@@ -61,7 +60,6 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             mskCarnet.SelectionStart = 0;
         }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')

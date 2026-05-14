@@ -50,24 +50,21 @@ namespace prySilvaMenendez_Act.FlotaAutos
             {
                 appseleccionada = "Uber";
             }
-            Alquileres Alquiler = new Alquileres();
-            Alquiler.App = appseleccionada;
-            Alquiler.Vehiculo = ((Vehiculos)cmbVehiculos.SelectedItem).Modelo;
-            Alquiler.FechaInicio = monthCalendar1.SelectionStart;
-            Alquiler.FechaFin = monthCalendar1.SelectionEnd;
-            listaAlquileres.Add(Alquiler);
             int precioPorDia;
             int dias = (fin - inicio).Days + 1;
             double total;
-            if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2020)
+
+            Vehiculos v = (Vehiculos)cmbVehiculos.SelectedItem;
+
+            if (v.Año >= 2020)
             {
                 precioPorDia = 70000;
             }
-            else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2010)
+            else if (v.Año >= 2010)
             {
                 precioPorDia = 50000;
             }
-            else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2006)
+            else if (v.Año >= 2006)
             {
                 precioPorDia = 45000;
             }
@@ -76,15 +73,26 @@ namespace prySilvaMenendez_Act.FlotaAutos
                 precioPorDia = 35000;
             }
             total = precioPorDia * dias;
-            DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + total, "¿Desea Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + total +"\n¿Desea Continuar?", "Confirmación",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.No)
             {
                 return;
             }
-            else
-            {
-                MessageBox.Show("Alquiler Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Alquileres a = new Alquileres();
+            a.App = appseleccionada;
+            a.Vehiculo = v.Patente;
+            a.FechaInicio = inicio;
+            a.FechaFin = fin;
+            a.Total = total;
+            listaAlquileres.Add(a);
+            ConexionBD bd = new ConexionBD();
+            bd.GuardarAlquiler(a);
+            MessageBox.Show("Alquiler Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnCabify.Checked = false;
+            btnDidi.Checked = false;
+            btnUber.Checked = false;
+            cmbVehiculos.SelectedIndex = -1;
+            monthCalendar1.SetDate(DateTime.Today);
         }
     }
 }

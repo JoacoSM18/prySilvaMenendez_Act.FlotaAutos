@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsAlquileres.cs" />
     <Compile Include="clsChoferes.cs" />
+    <Compile Include="clsConexion.cs" />
     <Compile Include="clsVehiculos.cs" />
     <Compile Include="frmAgregarAlquiler.cs">
       <SubType>Form</SubType>

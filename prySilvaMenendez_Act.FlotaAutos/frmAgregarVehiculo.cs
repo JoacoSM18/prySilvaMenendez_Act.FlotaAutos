@@ -26,21 +26,22 @@ namespace prySilvaMenendez_Act.FlotaAutos
         {
             if (txtMarca.Text == "" || txtModelo.Text == "" || mskPatente.Text == "")
             {
-                MessageBox.Show("Datos Incompletos, Por Favor Complete todos los Campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtMarca.Focus();
+                MessageBox.Show("Datos Incompletos");
                 return;
             }
-            Vehiculos Vehiculo = new Vehiculos();
-            Vehiculo.Marca = txtMarca.Text;
-            Vehiculo.Modelo = txtModelo.Text;
-            Vehiculo.Año = (int)numAño.Value;
-            Vehiculo.Patente = mskPatente.Text;
-            listaVehiculos.Add(Vehiculo);
-            MessageBox.Show("Vehiculo Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            txtMarca.Clear ();
-            txtModelo.Clear ();
+            Vehiculos v = new Vehiculos();
+            v.Marca = txtMarca.Text;
+            v.Modelo = txtModelo.Text;
+            v.Año = (int)numAño.Value;
+            v.Patente = mskPatente.Text;
+            listaVehiculos.Add(v);
+            ConexionBD bd = new ConexionBD();
+            bd.GuardarVehiculo(v);
+            MessageBox.Show("Vehiculo Agregado Correctamente");
+            txtMarca.Clear();
+            txtModelo.Clear();
             numAño.Value = 2026;
-            mskPatente.Clear ();
+            mskPatente.Clear();
         }
 
         private void mskPatente_Click(object sender, EventArgs e)
