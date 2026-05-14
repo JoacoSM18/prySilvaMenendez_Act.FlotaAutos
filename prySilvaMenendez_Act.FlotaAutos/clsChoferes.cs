@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace prySilvaMenendez_Act.FlotaAutos
 {
-    internal class Choferes
+    public class Choferes
     {
         public string Nombre { get; set; }
         public int DNI { get; set; }

@@ -13,6 +13,8 @@ namespace prySilvaMenendez_Act.FlotaAutos
     public partial class frmPrincipal : Form
     {
         public List<Vehiculos> listaVehiculos = new List<Vehiculos>();
+        public List<Choferes> listaChoferes = new List<Choferes>();
+        public List<Alquileres> listaAlquileres = new List<Alquileres>();
         public frmPrincipal()
         {
             InitializeComponent();
@@ -38,19 +40,19 @@ namespace prySilvaMenendez_Act.FlotaAutos
 
         private void btnVerAlquileresEnCurso_Click(object sender, EventArgs e)
         {
-            frmVerAlquileres VerAlquileres = new frmVerAlquileres();
+            frmVerAlquileres VerAlquileres = new frmVerAlquileres(listaAlquileres);
             VerAlquileres.ShowDialog();
         }
 
         private void btnVerDatosVehiculos_Click(object sender, EventArgs e)
         {
-            frmDatosVehiculos DatosVehiculos = new frmDatosVehiculos();
+            frmDatosVehiculos DatosVehiculos = new frmDatosVehiculos(listaVehiculos);
             DatosVehiculos.ShowDialog();
         }
 
         private void btnVerDatosChoferes_Click(object sender, EventArgs e)
         {
-            frmDatosChoferes DatosChoferes = new frmDatosChoferes();
+            frmDatosChoferes DatosChoferes = new frmDatosChoferes(listaChoferes);
             DatosChoferes.ShowDialog();
         }
 

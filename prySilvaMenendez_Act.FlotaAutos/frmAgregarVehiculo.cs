@@ -20,7 +20,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
         }
         private void frmAgregarVehiculo_Load(object sender, EventArgs e)
         {
-            mskPatente.Mask = "LL-000-LL"; 
+            
         }
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
         {
@@ -51,6 +51,18 @@ namespace prySilvaMenendez_Act.FlotaAutos
         private void mskPatente_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.KeyChar = char.ToUpper(e.KeyChar);
+        }
+
+        private void numAño_ValueChanged(object sender, EventArgs e)
+        {
+            if (numAño.Value >= 2016)
+            {
+                mskPatente.Mask = "LL-000-LL";
+            }
+            else
+            {
+                mskPatente.Mask = "LLL-000";
+            }
         }
     }
 }

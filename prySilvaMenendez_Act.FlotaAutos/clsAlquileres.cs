@@ -10,11 +10,11 @@ namespace prySilvaMenendez_Act.FlotaAutos
     {
         public string App { get; set; }
         public string Vehiculo { get; set; }
-        public DateTime Intervalo { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
         public override string ToString()
         {
-            return App + " - " + Vehiculo + " (" + Intervalo + ")";
+            return App + " - " + Vehiculo + " (" + FechaInicio + " - " + FechaFin + ")";
         }
-
     }
 }

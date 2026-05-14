@@ -14,8 +14,8 @@ namespace prySilvaMenendez_Act.FlotaAutos
     {
         public List<Vehiculos> listaVehiculos;
         public List<Alquileres> listaAlquileres = new List<Alquileres>();
-        String precio;
-        String aumento;
+        double precio;
+        double aumento;
         String appseleccionada;
         public frmAgregarAlquiler(List<Vehiculos> vehiculos)
         {
@@ -32,7 +32,7 @@ namespace prySilvaMenendez_Act.FlotaAutos
         }
 
         private void btnAgregarVehiculo_Click(object sender, EventArgs e)
-        { 
+        {
             DateTime inicio = monthCalendar1.SelectionStart;
             DateTime fin = monthCalendar1.SelectionEnd;
             if (btnCabify.Checked == false && btnDidi.Checked == false && btnUber.Checked == false || cmbVehiculos.SelectedIndex == -1 || monthCalendar1.SelectionEnd == monthCalendar1.SelectionStart)
@@ -55,13 +55,53 @@ namespace prySilvaMenendez_Act.FlotaAutos
             Alquileres Alquiler = new Alquileres();
             Alquiler.App = appseleccionada;
             Alquiler.Vehiculo = ((Vehiculos)cmbVehiculos.SelectedItem).Modelo;
-            Alquiler.Intervalo = DateTime.Parse(monthCalendar1.SelectionStart.ToString());
+            Alquiler.FechaInicio = monthCalendar1.SelectionStart;
+            Alquiler.FechaFin = monthCalendar1.SelectionEnd;
             listaAlquileres.Add(Alquiler);
-            MessageBox.Show("Alquiler Agregado Correctamente", "Agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            if ((fin - inicio).Days > 7)
+            if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2020)
             {
-                aumento = "20%";
+                precio = 70000;
+            }
+            else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2010)
+            {
+                precio = 50000;
+            }
+            else if (((Vehiculos)cmbVehiculos.SelectedItem).Año >= 2006)
+            {
+                precio = 45000;
+            }
+            else
+            {
+                precio = 35000;
+            }
+            if ((fin - inicio).Days >= 21)
+            {
+                aumento = 1.4;
+            }
+            else if ((fin - inicio).Days >= 14)
+            {
+                aumento = 1.3;
+            }
+            else if ((fin - inicio).Days >= 7)
+            {
+                aumento = 1.2;
+            }
+            else if ((fin - inicio).Days >= 4)
+            {
+                aumento = 1.1;
+            }
+            else
+            {
+                aumento = 1.05;
+            }
+            DialogResult resultado = MessageBox.Show("El Total a Pagar es de $" + precio * aumento, "¿Desea Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Alquiler Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

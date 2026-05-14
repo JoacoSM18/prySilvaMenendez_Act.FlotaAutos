@@ -105,6 +105,7 @@
             0,
             0,
             0});
+            this.numAño.ValueChanged += new System.EventHandler(this.numAño_ValueChanged);
             // 
             // mskPatente
             // 

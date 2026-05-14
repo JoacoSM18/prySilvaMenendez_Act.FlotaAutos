@@ -12,9 +12,18 @@ namespace prySilvaMenendez_Act.FlotaAutos
 {
     public partial class frmDatosVehiculos : Form
     {
-        public frmDatosVehiculos()
+        List<Vehiculos> listaVehiculos;
+
+        public frmDatosVehiculos(List<Vehiculos> vehiculos)
         {
             InitializeComponent();
+            listaVehiculos = vehiculos;
+        }
+
+        private void frmDatosVehiculos_Load(object sender, EventArgs e)
+        {
+            dgvVehiculos.DataSource = null;
+            dgvVehiculos.DataSource = listaVehiculos;
         }
     }
 }
